@@ -7,7 +7,12 @@ const baseConfig = require('./webpack.base.config');
 const config = merge(baseConfig, {
   devtool: 'eval',
 
-  entry: './client/index',
+  entry: [
+    'webpack-hot-middleware/client',
+    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',
+    './client/index',
+  ],
 
   output: {
     publicPath: '/',
