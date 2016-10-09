@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -15,6 +16,8 @@ const config = merge(baseConfig, {
   ],
 
   output: {
+    // filename: '[name].[hash:7].js',
+    // path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
 

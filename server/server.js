@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(compression());
-app.use(Express.static(path.resolve(__dirname, '../build')));
+app.use(Express.static(path.resolve(__dirname, '../dist')));
 app.use(morgan('dev'));
 
 // start app
