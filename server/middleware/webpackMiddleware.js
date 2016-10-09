@@ -1,3 +1,4 @@
+console.log('started webpack middleware');
 import devMiddleware from 'webpack-dev-middleware';
 import hotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';

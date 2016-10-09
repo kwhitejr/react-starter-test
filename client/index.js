@@ -9,6 +9,8 @@ import routes from './routes';
 import configureStore from './store';
 // import 'styles/app.css';
 
+console.log('reading index, the entry point');
+
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
 

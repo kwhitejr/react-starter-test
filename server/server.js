@@ -1,3 +1,4 @@
+console.log('express server file reading');
 import Express from 'express';
 import compression from 'compression';
 // import mongoose from 'mongoose';
@@ -9,12 +10,14 @@ import serverConfig from './config';
 
 // Webpack Requirements
 import { webpackMiddleware, webpackHotMiddleware } from './middleware/webpackMiddleware';
+console.log('imported webpackMiddleware');
 
 // Initialize the Express App
 const app = new Express();
 
 // Run Webpack dev server in development mode
 if (process.env.NODE_ENV === 'development') {
+  console.log('running in dev mode');
   app.use(webpackMiddleware);
   app.use(webpackHotMiddleware);
 }
